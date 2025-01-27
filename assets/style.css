@@ -1,23 +1,71 @@
-body{
-    margin: 15px;
-} 
-.navbar ul{
-    list-style-type: none;
-    background-color: hsl(0, 0%, 25%);
-    padding: 0px;
-    margin: 0px;
-    overflow: hidden;
+/* Basic Reset to avoid margin and padding issues */
+* {
+  margin: 5;
+  padding: 0;
+  box-sizing: border-box;
 }
- a{
-    color: white;
-    text-decoration: none;
-    padding: 30px;
+
+/* Styling for the navbar */
+.nav {
+  background-color: #343a40; /* Dark background for the navbar */
+  position: fixed;
+  top: 55;
+  left: 0;
+  width: 100%;
+  z-index: 1030; /* Ensure the navbar stays on top */
+  padding: 10px 0;
+}
+
+/* Navbar links and brand */
+.nav-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #f8f9fa;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+
+.nav-nav .nav-item {
+  display: flex;
+  margin-left: 15px;
+}
+
+.nav-link {
+  color: #1b88f5;
+  font-size: 1.1rem;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #2cc149; /* Change color on hover */
+  background-color: #495057;
+  border-radius: 5px;
+}
+
+/* Add padding to the body or content to prevent overlap with fixed navbar */
+body {
+  padding-top: 60px; /* Adjust this value to the height of your navbar */
+}
+
+/* Optional: Add media query for responsiveness */
+@media (max-width: 768px) {
+  .navbar-brand {
+      font-size: 1.5rem;
+  }
+
+  .nav-link {
+      font-size: 1rem;
+  }
+  li {
+    float: right;
+  }
+  
+  a {
     display: block;
-    text-align: center;
-}
-.navbar a:hover{
-    background-color: hsl(0, 0%, 10%);
-}
-.navbar li{
-    float: left;
+    padding: 8px;
+    background-color: #dddddd;
+  }
 }
